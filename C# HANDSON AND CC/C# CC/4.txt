@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmployeeInfo
+{
+    public class program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the Company Name:");
+            string com_name = Console.ReadLine();
+            Console.WriteLine("Enter the Employee Name:");
+            string emp_name = Console.ReadLine();
+            Console.WriteLine("Enter the Project Name:");
+            string pro_name = Console.ReadLine();
+            Console.WriteLine("Enter the Year:");
+            int year = Convert.ToInt32(Console.ReadLine());
+            TotalInfo(com_name,emp_name,pro_name,year);
+
+        }
+        public static void headerMessage(string compname)
+        {
+            Console.WriteLine(compname +" Employee Information");
+        }
+        public static void footerMessage(int year)
+        {
+            Console.WriteLine("Copyright " + year);
+            Console.WriteLine("All Rights Reserved.");
+        }
+        public static void TotalInfo(string comname, string empname, string proname, int year)
+        {
+            headerMessage(comname);
+            Console.WriteLine(empname);
+            Console.WriteLine(proname);
+            footerMessage(year);
+
+        }
+
+    }
+
+}

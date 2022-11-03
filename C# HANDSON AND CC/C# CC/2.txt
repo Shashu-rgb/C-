@@ -1,0 +1,46 @@
+using System;
+
+public class CC
+{
+    public static void Main(String[] Args)
+    {
+        float n1, n2, n3,  Day1_total,Day2_total,Day3_total;
+        float discount_1, discount_2, discount_3;
+        Console.WriteLine("Enter Product name:");
+        string ProName = Console.ReadLine();
+        Console.WriteLine("Enter Product price:");
+        int ProPrice=Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Is the product on SALE(yes/no):");
+        string Prostatus= Console.ReadLine();
+        Console.WriteLine("Enter number of product sold in day 1:");
+        int day1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter number of product sold in day 2:");
+        int day2 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter number of product sold in day 3:");
+        int day3 = Convert.ToInt32(Console.ReadLine());
+        if(Prostatus=="yes")
+        {
+            discount_1=(ProPrice*7/100);
+            n1 = ProPrice -discount_1;
+            discount_2 =n1*7/100;
+            n2 = n1 - discount_2;
+            discount_3 = n2 * 7 / 100;
+            n3 = n2 - discount_3;
+            Day1_total = n1 * day1;
+            Day2_total = n2 * day2;
+            Day3_total = n3 * day3;
+            Console.WriteLine($"Day 1 sales total :{Day1_total}");
+            Console.WriteLine($"Day 2 sales total :{Day2_total}");
+            Console.WriteLine($"Day 3 sales total :{Day3_total}");
+        }
+        else
+        {
+            Day1_total=ProPrice*day1;
+            Day2_total=ProPrice*day2;
+            Day3_total=ProPrice*day3;
+            Console.WriteLine($"Day 1 sales total :{Day1_total}");
+            Console.WriteLine($"Day 2 sales total :{Day2_total}");
+            Console.WriteLine($"Day 3 sales total :{Day3_total}");
+        }  
+    }
+}

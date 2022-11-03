@@ -1,0 +1,73 @@
+using System;
+
+namespace MaxEnroll
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Total Students Placed in CS: ");
+            int cs= Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Total Students Placed in MECH: ");
+            int mech = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Total Students Placed in MET: ");
+            int met = Convert.ToInt32(Console.ReadLine());
+            int large = cs;
+            if(cs>mech)
+            {
+                if(cs>met)
+                {
+                    Console.WriteLine("Highest placement is in the department of CS");
+                }
+                else if(cs==met)
+                {
+                    Console.WriteLine("Highest placement is in CS");
+                    Console.WriteLine("Highest placement is also in MET");
+                }
+                else
+                {
+                    Console.WriteLine("Highest placement is in the department of MET");
+                }
+                
+            }
+            else if(mech>cs)
+            {
+                if (mech > met)
+                {
+                    Console.WriteLine("Highest placement is in the department of MECH");
+                }
+                else if (mech == met)
+                {
+                    Console.WriteLine("Highest placement is in MECH");
+                    Console.WriteLine("Highest placement is also in MET");
+                }
+                else
+                {
+                    Console.WriteLine("Highest placement is in the department of MET");
+                }
+            }
+            else
+            {
+                if (mech > met)
+                {
+                    Console.WriteLine("Highest placement is in CS");
+                    Console.WriteLine("Highest placement is also in MECH");
+                }
+                else if (mech == met)
+                {
+                    Console.WriteLine("Highest placement is in CS");
+                    Console.WriteLine("Highest placement is also in MECH");
+                    Console.WriteLine("Highest placement is also in MET");
+                }
+                else
+                {
+                    Console.WriteLine("Highest placement is in the department of MET");
+                }
+            }
+
+
+
+            }
+
+        }
+    }
